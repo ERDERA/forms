@@ -1,0 +1,38 @@
+name: Team Member Request
+description: Form to request a new team member within the organization
+title: "Request to be added to the task github"
+assignees:
+  - 14_1_Admins  # Replace with the actual GitHub username(s) or team name
+
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This form is for requesting a new team member to be added to the organization.**
+        Please fill in the details below. Please only request addition for yourself. 
+
+  - type: input
+    id: new_member_name
+    attributes:
+      label: New Member Name
+      description: Provide your full name.
+      placeholder: "Enter the name"
+
+  - type: dropdown
+    id: access_level
+    attributes:
+      label: Access Level
+      description: What level of access should the new team member have?
+      options:
+        - "Read"
+        - "Write"
+        - "Admin"
+        - "Custom (specify below)"
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: Additional Notes
+      description: Any other details or comments about this request?
+      placeholder: "Enter additional notes if any"
